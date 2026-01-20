@@ -12,8 +12,8 @@ pipeline {
         stage('Deploy Two-Tier App') {
             steps {
                 sh '''
-                docker-compose down || true
-                docker-compose up --build
+                docker compose down || true
+                docker compose up -d --build
                 '''
             }
         }
