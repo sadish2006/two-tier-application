@@ -15,7 +15,7 @@ services:
       - two-tier-net
 
   app:
-    build: .
+    build: ./frontend
     container_name: flask-app
     environment:
       DB_HOST: mysql
