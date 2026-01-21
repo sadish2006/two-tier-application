@@ -16,7 +16,29 @@
 
 🧩 Architecture Diagram
        
-        Developer -- git push --> GitHub Repository --  Webhook Trigger --> Jenkins (CI/CD) -- Build & Deploy -- >Docker Compose --  Flask App(port 5000) --  MySQL DB(port 3036) --> Access application.
+          Developer
+            |
+            |  Git Push
+            ↓
+        GitHub Repository
+            |
+            |  Webhook Trigger
+            ↓
+        Jenkins (CI/CD)
+            |
+            |  Build & Deploy
+            ↓
+     Docker Compose
+      ┌───────────────┐
+      │ Flask App     │  → Port 5000
+      │ (App Tier)    │
+      └───────────────┘
+              |
+              |
+      ┌───────────────┐
+      │ MySQL DB      │
+      │ (DB Tier)     │
+      └───────────────┘
             
 
 
