@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS demo (
 );
 
 INSERT INTO demo (message)
-VALUES ('Two Tier Application Working Successfully 🚀');
+VALUES ('Two Tier Application Working Successfully');
